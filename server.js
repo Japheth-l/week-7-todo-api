@@ -1,20 +1,24 @@
 require('dotenv').config();
 const express = require('express');
 
-const logger       = require('./middleware/logger');
+const connectDB = require('./db/connect');
+const logger = require('./middleware/logger');
 const errorHandler = require('./middleware/errorHandler');
-const notesRouter  = require('./routes/notes');
+const todosRouter = require('./routes/todos');
 
 const app = express();
 
 app.use(express.json());
-app.use(logger);               // logging middleware
+app.use(logger);
 
-app.use('/notes', notesRouter); // routes
+app.use('/todos', todosRouter);
 
-app.use(errorHandler);         // global error handler — always last
+app.use(errorHandler); // always last
 
-const PORT = process.env.PORT || 5002;
-app.listen(PORT, () => {
-  console.log(`Server is listening on port ${PORT}`);
+const PORT = process.env.PORT || 3000;
+
+connectDB().then(() => {
+  app.listen(PORT, () => {
+    console.log(`Server is listening on port ${PORT}`);
+  });
 });

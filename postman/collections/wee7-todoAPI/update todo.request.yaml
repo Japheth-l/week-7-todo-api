@@ -1,0 +1,8 @@
+$kind: http-request
+name: update todo
+url: localhost:3001/todos/6a6f617827cae7a68f737af5
+method: PATCH
+body:
+  type: json
+  content: '{ "completed": true }'
+order: 4486573168760327

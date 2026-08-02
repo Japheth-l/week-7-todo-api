@@ -1,0 +1,5 @@
+$kind: http-request
+name: delete todo
+url: http://localhost:3001/todos/6a6f610e27cae7a68f737af3
+method: DELETE
+order: 4494346626573348

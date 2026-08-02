@@ -1,0 +1,8 @@
+$kind: http-request
+name: create todo
+url: http://localhost:3001/todos
+method: POST
+body:
+  type: json
+  content: '{ "task": "buy groceries" }'
+order: 1785684012697

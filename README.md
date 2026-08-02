@@ -1,19 +1,24 @@
-This resipotory is the Betechified basic certification Group Project for Backend development for the  April, 2026 cohort.
+# Todo API
 
- It is a simple Express.js API projects for a Note-Taking API.
+A RESTful API for creating, retrieving, updating, and deleting todos, built with Express.js and MongoDB. This project migrates a basic in-memory CRUD API to persistent storage using Mongoose, so data survives server restarts.
 
+## Features
 
-This API was built to allow users to create, retrieve, update, and delete text notes.
+- Full CRUD operations for todos (Create, Read, Update, Delete)
+- Persistent storage with MongoDB Atlas via Mongoose
+- Filter todos by completion status via query parameter (`?completed=true` / `?completed=false`)
+- Request logging middleware (method, URL, timestamp, IP)
+- Centralized global error handler with consistent JSON error responses
+- try/catch error handling across all routes, forwarding errors via `next()`
+- Automatic `createdAt` / `updatedAt` timestamps on every document
 
- Express.js API was used in implementing CRUD operations while Postman collection was used for testing endpoints.
+## Tech Stack
 
-It is a functional API implementing CRUD operations without a database.
+- Node.js
+- Express.js
+- MongoDB Atlas
+- Mongoose (ODM)
+- dotenv (environment variables)
+- nodemon (development)
 
-
-The presentation was on done on the 3rd of May,2026.- Kayode Akanni 
-
-
-Group members: Japheth and 'Kayode Akanni 
-
-Group Presenter:Japheth
- 
+## Project Structure

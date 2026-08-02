@@ -1,0 +1,11 @@
+﻿name: New Environment
+values:
+  - key: PORT
+    value: ''
+  - key: MONGODB_URI
+    value: ''
+  - key: baseUrl
+    value: 'http://localhost:3000'
+  - key: todoId
+    value: ''
+    description: 'MongoDB ObjectId of a todo item for single-item operations'

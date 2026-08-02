@@ -1,0 +1,7 @@
+$kind: http-request
+url: localhost:3001/todos
+method: POST
+body:
+  type: json
+  content: '{ "task": "walk the dog", "completed": true }'
+order: 3607075934364283

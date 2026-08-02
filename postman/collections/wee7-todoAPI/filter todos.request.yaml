@@ -1,0 +1,7 @@
+$kind: http-request
+name: filter todos
+url: http://localhost:3001/todos?completed=false
+method: GET
+queryParams:
+  completed: "false"
+order: 4475865506007414

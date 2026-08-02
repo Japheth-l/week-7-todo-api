@@ -1,0 +1,8 @@
+$kind: http-request
+name: create todo 3
+url: localhost:3001/todos
+method: POST
+body:
+  type: json
+  content: '{ "task": "finish assignment" }'
+order: 3794109470285204
